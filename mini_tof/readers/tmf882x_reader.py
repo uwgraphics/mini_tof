@@ -111,6 +111,7 @@ class TMF882XReader:
         hists, dists, timestamp = m
 
         message = ToFFrame()
+        message.ambient_light = [] # not provided in TMF882X
         message.i2c_address = dists[0]["I2C_address"]
         message.tick = dists[0]["tick"]
         message.num_valid_results = dists[0]["num_valid_results"]
